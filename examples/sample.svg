@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<rect x="50" y="0" width="200" height="200" fill="red" />
+<circle cx="150" cy="100" r="75" fill="green"/>
+<polygon points="150, 18 244, 182 56, 182" fill="lightblue" />
+  <style>
+    .small {
+      font: italic 13px sans-serif;
+    }
+    .heavy {
+      font: bold 30px sans-serif;
+    }
+
+    /* Note that the color of the text is set with the    *
+     * fill property, the color property is for HTML only */
+    .Rrrrr {
+      font: italic 40px serif;
+      fill: red;
+    }
+  </style>
+ <text x="125" y="130" fill="" class="heavy">cat</text>
+</svg>
