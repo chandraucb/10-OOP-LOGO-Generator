@@ -1,6 +1,8 @@
 const SVG = require('./lib/svg')
 const inquirer = require('inquirer')
 
+//Question prompts
+
 const questions = [{
     type: 'input',
     name: 'logoText',
