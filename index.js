@@ -1,28 +1,41 @@
 const SVG = require('./lib/svg')
 const inquirer = require('inquirer')
 
+const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt')
+
+// The name doesn't have to `maxlength-input` - it can be anything you like
+inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt)
+
 //Question prompts
 
 const questions = [{
-    type: 'input',
+    type: 'maxlength-input',
     name: 'logoText',
     message: 'Enter upto 3 character for your logo text?',
-    required: true
+    required: true,
+    maxLength: 3
   },{
     type: 'input',
     name: 'logoTextColor',
     message: 'Enter logo text color as color keyword or a hexadecimal number',
-    required: true
+    default() {
+      return 'white';
+    }
   },{
     type: 'list',
     message: 'Pick a shape for your logo',
     name: 'shape',
-    choices: [ 'Triangle','Square','Circle']
+    choices: [ 'Triangle','Square','Circle'],
+    default() {
+      return 'Circle';
+    }
   },{
     type: 'input',
     name: 'logoColor',
     message: 'Enter logo color as color keyword or a hexadecimal number',
-    required: true
+    default() {
+      return 'green';
+    }
   },
 ]
 
